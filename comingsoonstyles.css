@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope');
+html{
+	height:100%;
+	overflow:hidden;
+}
+body{
+  color: #CBCBCB;
+  text-shadow: 2px 2px ##858585;
+  background-image: url("media/moretrees.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width:100%;
+  margin:0;
+  padding:0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family:'Annie Use Your Telescope';
+}
+.text-container{
+	margin-top:80vh;
+	margin-left:10vh;
+	font-size:250%
+
+}

@@ -1,90 +1,47 @@
-/* Code Styles */
-
-*{
-	box-sizing: border-box; /* Include margin and padding in all elements. */
+.card-container {
+  position: relative;
+  width: 20%;
+  margin:2%;
+  border: 1px solid black;
+  display:inline-block;
 }
 
-body{
-	margin:0;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 1rem;
-	line-height: 1.5;
-	overflow-x:hidden;
-	-webkit-perspective:1000px;
-	background: transparent;
-}
-/*VIDEO*/
-.v-container{
-	position:fixed;
-	min-width:100%;
-	min-height:100%;
-	
-
-}
-.v-background{
-	min-width:100%;
-	z-index:-1;
-	right: 0;
-	bottom: 100%;	
-}
-/*NAVIGATION*/
-
-
-/* CUBES */
-a, h2, h1{
-	text-decoration: none;
-	color: #7D7D81	
-}
-a:hover, h2{
-     text-decoration:none; 
-	 text-shadow: 1px 1px 2px #2D242B;
-	 color:#fff;
-     cursor:pointer; 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.cube-container{
-	background: transparent;
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #2D2D2D;
 }
-.cube{
-	width:300px;
-	text-align:center;
-	margin:2 auto;
-	height:110px;
-	
-	-webkit-transition:-webkit-tranform .33s;
-	transition:transform .33s; 
-	
-	-webkit-transform-style: preserve-3d; /*very important for preserving the 3d image and seeing the back side of the cube */
-	transform-style: preserve-3d;
+
+.card-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.label{
 	
 }
-.front-face, .back-face{
-	opacity: .9;
-	background: #0000;
-	border: 1px solid #ffff;
-	
-	-webkit-border-radius:5px;
-	border-radius:5px;
-	
-
-	height: 100px;
-}
-/*Positioning*/
-.front-face{
-	-webkit-transform:translateZ(50px);
-	transform: translateZ(50px);
-}
-.back-face{
-	-webkit-transform:rotateX(-90deg) translateZ(-50px);
-	transform:rotateX(-90deg) translateZ(-50px);
-}
-.cube:hover{
-	cursor:pointer;
-	-webkit-transform:rotateX(89deg);
-	transform: rotateX(89deg);	
-
-}
-.cube:hover > .front-face{	
-	/*transition: visibility 0s;*/
-	/*visibility: hidden;*/
+.sub-text{
+	color:#939090;
 }
